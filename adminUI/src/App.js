@@ -19,6 +19,8 @@ import Form from "./scenes/form";
 import Blog from "./scenes/blog";
 import NewBlogEdit from "./components/blogModel/NewBlogEdit";
 import FAQ from "./scenes/faq";
+import Notification from "./scenes/notification/Notification";
+import NewNotifyEdit from "./components/notificationModel/NewNotifyEdit";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -60,7 +62,8 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/neweditblog/:id" element={<NewBlogEdit />} />
                 <Route path="/faq" element={<FAQ />} />
-                
+                <Route path="/notify" element={<Notification />} />
+                <Route path="/notify/edit/:id" element={<NewNotifyEdit />} />
               </Route>
             </Route>
 

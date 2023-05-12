@@ -9,6 +9,7 @@ import categoryRouter from "./routes/Category.js";
 import subCategoryRouter from "./routes/SubCategory.js";
 import BlogManageRouter from "./routes/BlogManagement.js";
 import FaqRouter from "./routes/Faq.js";
+import notificationRoute from "./routes/Notification.js";
 
 
 const app = express();
@@ -51,6 +52,9 @@ app.use("/api/blog", BlogManageRouter);
 
 //FAQ Routes
 app.use("/api/faq", FaqRouter);
+
+//Notification Routes
+app.use("/api/notify", notificationRoute);
 
 // for testing only
 app.get("/", (req, res) => {
