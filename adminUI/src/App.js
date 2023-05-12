@@ -15,6 +15,7 @@ import Category from "./scenes/category";
 import SubCategory from "./scenes/subCategory";
 import NewSubCategoryForm from "./components/subCategoryModel/NewSubCategoryForm";
 import NewSubCategoryEdit from "./components/subCategoryModel/NewSubCategoryEdit";
+import Form from "./scenes/form";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -52,8 +53,10 @@ function App() {
                   path="/subcategory/edit/:id"
                   element={<NewSubCategoryEdit />}
                 />
+                <Route path="/form" element={<Form />} />
               </Route>
             </Route>
+
             <Route element={<PublicRoutes />}>
               <Route path="/login" element={<LoginForm />} />
             </Route>
