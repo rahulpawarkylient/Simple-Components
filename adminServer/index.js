@@ -10,6 +10,7 @@ import subCategoryRouter from "./routes/SubCategory.js";
 import BlogManageRouter from "./routes/BlogManagement.js";
 import FaqRouter from "./routes/Faq.js";
 import notificationRoute from "./routes/Notification.js";
+import TandCRouter from "./routes/T&C.js";
 
 
 const app = express();
@@ -55,6 +56,9 @@ app.use("/api/faq", FaqRouter);
 
 //Notification Routes
 app.use("/api/notify", notificationRoute);
+
+//T&C Routes
+app.use("/api/T&C", TandCRouter);
 
 // for testing only
 app.get("/", (req, res) => {

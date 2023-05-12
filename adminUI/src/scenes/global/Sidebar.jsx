@@ -14,6 +14,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import ReceiptIcon from "@mui/icons-material/Receipt";
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -200,6 +201,13 @@ const Sidebar = () => {
               title="Notification"
               to="/notify"
               icon={<NotificationsActiveIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="T&C Page"
+              to="/t&c"
+              icon={<ReceiptIcon />}
               selected={selected}
               setSelected={setSelected}
             />
