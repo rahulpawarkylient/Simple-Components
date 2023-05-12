@@ -16,6 +16,8 @@ import SubCategory from "./scenes/subCategory";
 import NewSubCategoryForm from "./components/subCategoryModel/NewSubCategoryForm";
 import NewSubCategoryEdit from "./components/subCategoryModel/NewSubCategoryEdit";
 import Form from "./scenes/form";
+import Blog from "./scenes/blog";
+import NewBlogEdit from "./components/blogModel/NewBlogEdit";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -54,6 +56,9 @@ function App() {
                   element={<NewSubCategoryEdit />}
                 />
                 <Route path="/form" element={<Form />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/neweditblog/:id" element={<NewBlogEdit />} />
+                
               </Route>
             </Route>
 

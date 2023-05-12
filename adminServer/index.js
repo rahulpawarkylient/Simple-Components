@@ -7,6 +7,7 @@ import userRouter from "./routes/ManageUsers.js";
 import productRouter from "./routes/ManageProducts.js";
 import categoryRouter from "./routes/Category.js";
 import subCategoryRouter from "./routes/SubCategory.js";
+import BlogManageRouter from "./routes/BlogManagement.js";
 
 
 const app = express();
@@ -43,6 +44,9 @@ app.use("/api/category", categoryRouter);
 
 //Sub-Category Routes
 app.use("/api/sub-category", subCategoryRouter);
+
+//Sub-Category Routes
+app.use("/api/blog", BlogManageRouter);
 
 // for testing only
 app.get("/", (req, res) => {

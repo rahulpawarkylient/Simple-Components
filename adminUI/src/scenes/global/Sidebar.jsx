@@ -11,6 +11,7 @@ import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantity
 import CategoryIcon from '@mui/icons-material/Category';
 import ListIcon from '@mui/icons-material/List';
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -176,6 +177,13 @@ const Sidebar = () => {
               title="Profile Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+             <Item
+              title="Blog"
+              to="/blog"
+              icon={<DashboardCustomizeIcon />}
               selected={selected}
               setSelected={setSelected}
             />
