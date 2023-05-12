@@ -21,6 +21,7 @@ import NewBlogEdit from "./components/blogModel/NewBlogEdit";
 import FAQ from "./scenes/faq";
 import Notification from "./scenes/notification/Notification";
 import NewNotifyEdit from "./components/notificationModel/NewNotifyEdit";
+import TermsAndConditions from "./scenes/T&C";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -64,6 +65,8 @@ function App() {
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/notify" element={<Notification />} />
                 <Route path="/notify/edit/:id" element={<NewNotifyEdit />} />
+                <Route path="/t&c" element={<TermsAndConditions />} />
+
               </Route>
             </Route>
 
