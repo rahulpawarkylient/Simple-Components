@@ -18,6 +18,7 @@ import NewSubCategoryEdit from "./components/subCategoryModel/NewSubCategoryEdit
 import Form from "./scenes/form";
 import Blog from "./scenes/blog";
 import NewBlogEdit from "./components/blogModel/NewBlogEdit";
+import FAQ from "./scenes/faq";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -58,6 +59,7 @@ function App() {
                 <Route path="/form" element={<Form />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/neweditblog/:id" element={<NewBlogEdit />} />
+                <Route path="/faq" element={<FAQ />} />
                 
               </Route>
             </Route>
