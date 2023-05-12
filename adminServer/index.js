@@ -4,6 +4,9 @@ import cors from "cors";
 import Connection from "./db/Connection.js";
 import adminRouter from "./routes/AdminLogin.js";
 import userRouter from "./routes/ManageUsers.js";
+import productRouter from "./routes/ManageProducts.js";
+import categoryRouter from "./routes/Category.js";
+import subCategoryRouter from "./routes/SubCategory.js";
 
 
 const app = express();
@@ -23,11 +26,23 @@ Connection(USERNAME, PASSWORD);
 //convert in json form
 app.use(express.json({ limit: "5mb" }));
 
+// Upload Image Static
+app.use("/uploads", express.static("uploads"));
+
 //Admin Routes
 app.use("/api/", adminRouter);
 
 //user Routes
 app.use("/api/user", userRouter);
+
+//Product Routes
+app.use("/api/product", productRouter);
+
+//Category Routes
+app.use("/api/category", categoryRouter);
+
+//Sub-Category Routes
+app.use("/api/sub-category", subCategoryRouter);
 
 // for testing only
 app.get("/", (req, res) => {
