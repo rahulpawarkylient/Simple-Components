@@ -7,6 +7,9 @@ import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
+import CategoryIcon from '@mui/icons-material/Category';
+import ListIcon from '@mui/icons-material/List';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -128,6 +131,35 @@ const Sidebar = () => {
               title="Manage User"
               to="/users"
               icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Products
+            </Typography>
+
+            <Item
+              title="Manage Products"
+              to="/products"
+              icon={<ProductionQuantityLimitsIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Category"
+              to="/category"
+              icon={<CategoryIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Sub Category"
+              to="/subcategory"
+              icon={<ListIcon />}
               selected={selected}
               setSelected={setSelected}
             />
