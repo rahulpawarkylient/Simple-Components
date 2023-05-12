@@ -12,6 +12,7 @@ import CategoryIcon from '@mui/icons-material/Category';
 import ListIcon from '@mui/icons-material/List';
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -184,6 +185,13 @@ const Sidebar = () => {
               title="Blog"
               to="/blog"
               icon={<DashboardCustomizeIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="FAQ Page"
+              to="/faq"
+              icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
